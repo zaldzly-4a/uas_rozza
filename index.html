@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .header {
+      background-color: #76FA92;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+    .header img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      animation: bounce 2s infinite alternate;
+    }
+    .header h1 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+    }
+    .header p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .navbar {
+      background-color: #C8F404;
+      overflow: hidden;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease; 
+    }
+    .navbar a:hover {
+      background-color: #A8D200; /* Darker shade on hover */
+      transform: scale(1.05);
+    }
+    .content {
+      background-color: #ABA0A0;
+      color: rgb(17, 16, 16);
+      padding: 20px;
+      text-align: center;
+    }
+    .content img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+    }
+    .content h2 {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+    .projects {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .project {
+      background-color: #76FA92;
+      color: black;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      width: calc(33% - 40px); /* Responsive width */
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    }
+    .contact {
+      background-color: #76FA92;
+      padding: 20px;
+      text-align: center; 
+    }
+    .contact h2 {
+      font-size: 24px; 
+      margin-bottom: 20px; 
+    }
+    .contact p { 
+        margin: 5px 0; 
+        animation: slideInUp 1s ease-in; 
+        opacity: 0; 
+        animation-fill-mode: forwards; 
+        animation-delay: var(--i); /* Custom delay for each paragraph */
+        --i : calc(var(--n) * var(--delay)); /* Dynamic delay */
+     }
+
+     /* Animation Keyframes */
+     @keyframes fadeIn {
+       from { opacity: 0; }
+       to { opacity: 1; }
+     }
+
+     @keyframes bounce {
+       from { transform: translateY(0); }
+       to { transform: translateY(-10px); }
+     }
+
+     @keyframes slideInUp {
+       from { transform: translateY(20px); opacity :0;}
+       to { transform :translateY(0); opacity :1;}
+     }
+
+     /* Media Queries */
+     @media (max-width: 600px) {
+       .projects {
+         flex-direction : column; 
+         align-items : center; 
+       } 
+       .project {
+         width: calc(100% - 40px); /* Full width on small screens */
+       }
+     } 
+
+   </style>
+</head>
+<body>
+<div class="header">
+   <img alt="Profile picture of Rozza Kelvin M" height="100" src="profile.jpg" width="100"/>
+   <h1>ROZZA KELVIN M</h1>
+   <p>Program Studi Sistem Informasi</p>
+</div>
+<div class="navbar">
+   <a href="#">Home</a>
+   <a href="#">Profile</a>
+   <a href="#">About</a>
+   <a href="#">Contact</a>
+</div>
+<div class="content">
+   <img alt="A person looking at a scenic view with trees and mountains" height="200" src="map.jpg" width="150"/>
+   <h2>About Me</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <h2>Our Project</h2>
+   <div class="projects">
+       <div class="project">Game Developer</div>
+       <div class="project">IT Maintenance</div>
+       <div class="project">Network Engineer</div>
+   </div>
+</div>
+<div class="contact">
+   <h2>Contact Us</h2>
+   <p style="--n :1; --delay :0.1s;">Jl.Pajak Bakti No.42,Kisaran Kota,Kec.Kota kisaran Timur,Kab.Asahan
+    Provinsi.Sumatera Utara 212222</p>
+   <p style="--n :2; --delay :0.1s;">Phone.082164634202</p>
+   <p style="--n :3; --delay :0.1s;">Mail.myportfolio.com </p>
+   <p style="--n :4; --delay :0.1s;">Instagram.@rozzakelvin </p>
+   <img alt="Map showing the location of the address mentioned" height="200" src="map.jpg" width="300"/>
+</div>
+</body>
+</html>
